@@ -21,7 +21,7 @@ switch (true) {
     case score >= 80 && score <= 89:
         grade = "B";
         break;
-    case score >= 90 && score <= 100;
-        grade = "A";
+    case score >= 90 && score <= 100:
+        grade = "A";    
         break;
 }
