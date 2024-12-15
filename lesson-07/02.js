@@ -5,6 +5,9 @@
 
 function isNumeric(str) {
   // your code
+  if (str.trim() === "") {
+    return false
+  }
   return !isNaN(str) 
 }
 
