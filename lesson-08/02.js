@@ -35,12 +35,18 @@ let timerId
 startButton.addEventListener('click', () => {
   let counter = 3
   // your code
-
+  if (isTimerStarted) {
+    return; 
+  }
+  
+  
+  countdownDisplay.textContent = `${counter}`;
+  isTimerStarted = true
+  
   timerId = setInterval(function () {
+    counter -= 1
     if (counter > 0) {
-      isTimerStarted = true
       countdownDisplay.textContent = `${counter}`;
-      counter -= 1
     } else {
       countdownDisplay.textContent = "🚀";
       clearInterval(timerId)
@@ -54,8 +60,9 @@ cancelButton.addEventListener('click', () => {
   if (isTimerStarted) {
     clearInterval(timerId)
     countdownDisplay.textContent = "Отменено"
+    isTimerStarted = false
   }
-  isTimerStarted = true
+
 })
 
 // 2. Добавить обработчик событий для кнопки "Отмена":
