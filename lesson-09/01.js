@@ -23,7 +23,7 @@
   
 // }
 
-const numbers = [1, 2, 3, 4, 5]
+// const numbers = [1, 2, 3, 4, 5]
 
 const filter = (array, callback) => {
   let resultArray = []
@@ -42,4 +42,3 @@ const oddNumbers = filter(numbers, (element) => {
   return element % 2 !== 0
 });
 
-console.log(oddNumbers);
