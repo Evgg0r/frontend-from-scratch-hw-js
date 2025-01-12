@@ -89,32 +89,32 @@ cancelButton.addEventListener('click', () => {
 // Храни текущее значение счетчика в переменной.
 // Примерный код (без реализации)
 
-const startButton = document.getElementById('start');
-const pauseButton = document.getElementById('pause');
-const counterDisplay = document.getElementById('counter');
+// const startButton = document.getElementById('start');
+// const pauseButton = document.getElementById('pause');
+// const counterDisplay = document.getElementById('counter');
 
-let counter = 0;
-let timerId;
-let isTimerRunning = false;
+// let counter = 0;
+// let timerId;
+// let isTimerRunning = false;
 
-startButton.addEventListener('click', () => {
-  // Реализуй логику запуска счетчика
-  if (isTimerRunning) {
-    return;
-  }
+// startButton.addEventListener('click', () => {
+//   // Реализуй логику запуска счетчика
+//   if (isTimerRunning) {
+//     return;
+//   }
 
-  isTimerRunning = true
-  timerId = setInterval(() => {
-    counter += 1
-    counterDisplay.textContent = `${counter}`;
-  }, 1000);
-});
+//   isTimerRunning = true
+//   timerId = setInterval(() => {
+//     counter += 1
+//     counterDisplay.textContent = `${counter}`;
+//   }, 1000);
+// });
 
-pauseButton.addEventListener('click', () => {
-  // Реализуй логику паузы счетчика
-  if (isTimerRunning) {
-    clearInterval(timerId)
-    isTimerRunning = false;
-  }
+// pauseButton.addEventListener('click', () => {
+//   // Реализуй логику паузы счетчика
+//   if (isTimerRunning) {
+//     clearInterval(timerId)
+//     isTimerRunning = false;
+//   }
 
-});
+// });
