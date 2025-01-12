@@ -14,23 +14,23 @@
 
 
 
-const numbers = [1, 2, 3, 4, 5]
+// const numbers = [1, 2, 3, 4, 5]
 
 
-const map = (array, callback) => {
-  let resultArray = []
+// const map = (array, callback) => {
+//   let resultArray = []
 
-  for (let i = 0; i < array.length; i++) {
+//   for (let i = 0; i < array.length; i++) {
 
-    const result = callback(array[i]);
+//     const result = callback(array[i]);
 
-    resultArray.push(result);
-  }
-  return resultArray
-}
+//     resultArray.push(result);
+//   }
+//   return resultArray
+// }
 
-const doubledNumbers = map(numbers, (element) => {
-  return element * 2
-})
+// const doubledNumbers = map(numbers, (element) => {
+//   return element * 2
+// })
 
-console.log(doubledNumbers);
+// console.log(doubledNumbers);

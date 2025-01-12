@@ -26,19 +26,19 @@
 // const numbers = [1, 2, 3, 4, 5]
 
 const filter = (array, callback) => {
-  let resultArray = []
+  let resultArray = [];
 
   for (let i = 0; i < array.length; i++) {
-
-    if(callback(array[i], i)) {
-      resultArray.push(array[i])
+    if (callback(array[i], i)) {
+      resultArray.push(array[i]);
     }
   }
-  return resultArray
-}
+  return resultArray;
+};
 
 
-const oddNumbers = filter(numbers, (element) => {
-  return element % 2 !== 0
-});
+
+// const oddNumbers = filter(numbers, (element) => {
+//   return element % 2 !== 0
+// });
 
