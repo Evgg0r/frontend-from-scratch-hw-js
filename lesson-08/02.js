@@ -36,13 +36,13 @@ startButton.addEventListener('click', () => {
   let counter = 3
   // your code
   if (isTimerStarted) {
-    return; 
+    return;
   }
-  
-  
+
+
   countdownDisplay.textContent = `${counter}`;
   isTimerStarted = true
-  
+
   timerId = setInterval(function () {
     counter -= 1
     if (counter > 0) {
@@ -71,3 +71,50 @@ cancelButton.addEventListener('click', () => {
 // - В элементе отображения счётчика (countdownDisplay) должно появиться сообщение "Отменено".
 // - Отмена таймера возможна только во время его работы
 // - После отмены таймера возможен повторный запуск ракеты
+
+
+// Описание задачи: Создать счетчик, который будет увеличивать значение каждую секунду, начиная с 0. У него должны быть две кнопки:
+
+// "Старт": запускает счетчик.
+// "Пауза": приостанавливает счетчик.
+// Требования:
+
+// При нажатии на кнопку "Старт" счетчик должен начинать увеличиваться каждую секунду.
+// При нажатии на кнопку "Пауза" счетчик должен приостанавливать свое увеличение.
+// После нажатия на "Пауза", если снова нажать "Старт", счетчик должен продолжать увеличиваться с того места, где остановился.
+// Подсказки:
+
+// Используй setInterval для увеличения счетчика.
+// Используй clearInterval для остановки счетчика.
+// Храни текущее значение счетчика в переменной.
+// Примерный код (без реализации)
+
+const startButton = document.getElementById('start');
+const pauseButton = document.getElementById('pause');
+const counterDisplay = document.getElementById('counter');
+
+let counter = 0;
+let timerId;
+let isTimerRunning = false;
+
+startButton.addEventListener('click', () => {
+  // Реализуй логику запуска счетчика
+  if (isTimerRunning) {
+    return;
+  }
+
+  isTimerRunning = true
+  timerId = setInterval(() => {
+    counter += 1
+    counterDisplay.textContent = `${counter}`;
+  }, 1000);
+});
+
+pauseButton.addEventListener('click', () => {
+  // Реализуй логику паузы счетчика
+  if (isTimerRunning) {
+    clearInterval(timerId)
+    isTimerRunning = false;
+  }
+
+});
